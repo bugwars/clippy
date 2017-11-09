@@ -5,15 +5,15 @@ version_info = "0.2.0"
 
 # Checks if length parameter is an integer greater or equal 2
 def positive_ge_2(x):
-  try:
-    x = int(x)
-  except Exception as e:
-    raise argparse.ArgumentTypeError("Value must be an integer!")
-  if x < 2:
-    raise argparse.ArgumentTypeError("Minimum value for length is: 2")
-  return x
+    try:
+        x = int(x)
+    except Exception as e:
+        raise argparse.ArgumentTypeError("Value must be an integer!")
+    if x < 2:
+        raise argparse.ArgumentTypeError("Minimum value for length is: 2")
+    return x
 
-# Initializes argument parser.    
+# Initializes argument parser.        
 parser = argparse.ArgumentParser(description="A tool for generating counterstrings.")
 parser.add_argument("-l", "--length", dest="length", type=positive_ge_2, help="maximum length to be generated. Minimum value is: 2")
 parser.add_argument("-m", "--marker", dest="marker_char", default="*", help="use a custom marker character. Make sure to escape certain characters! Default: *")
@@ -22,16 +22,16 @@ args = parser.parse_args()
 
 # Checks for required parameters.
 if not (args.length or args.version):
-  parser.print_help()
-  exit()
+    parser.print_help()
+    exit()
 
 if len(args.marker_char) != 1:
-  exit("Marker must be a single character!")
+    exit("Marker must be a single character!")
 
 # Prints version.
 if args.version:
-  print(version_info)
-  exit(0)
+    print(version_info)
+    exit(0)
 
 # Init
 marker_char = args.marker_char
