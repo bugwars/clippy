@@ -1,13 +1,7 @@
 import argparse
-import sys
+import pyperclip
 
-# Imports Tkinter module depending on Python version.
-if sys.version_info[0] < 3:
-    from Tkinter import Tk
-else:
-    from tkinter import Tk
-
-version_info = "0.1.0"
+version_info = "0.2.0"
     
 parser = argparse.ArgumentParser(description="A tool for generating counterstrings.")
 parser.add_argument("-l", "--length", dest="length", type=int, help="maximum length to be generated")
@@ -25,11 +19,6 @@ if args.version:
 marker_char = "*"
 length = args.length
 
-# Initializes clipboard.
-tk = Tk()
-tk.withdraw()
-tk.clipboard_clear()
-
 # Init
 counterstring = "2" + marker_char
 last_position = 2
@@ -45,9 +34,5 @@ while len(counterstring) < length:
     counterstring += token
     last_position = position
 
-tk.clipboard_append(counterstring)
+pyperclip.copy(counterstring)
 print("Ready to paste!")
-
-# Cleanup
-tk.update()
-tk.destroy()
