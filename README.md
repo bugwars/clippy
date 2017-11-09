@@ -1,5 +1,5 @@
 ## Introduction
-A collection of Python scripts to generate test data for testing e.g. text fields. It is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [Counterstrings: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
+A collection of Python scripts to generate test data for testing e.g. text fields. It is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [counterstring: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
 
 > Sometimes you need to test a text field or document with different kinds of stressful inputs. But, it can be a pain to prepare the text data. PerlClip is a tool that helps you do that.
 
@@ -14,9 +14,9 @@ Tested with:
 
 ## Usage
 ```
-usage: counterstrings.py [-h] [-l LENGTH] [-m MARKER_CHAR] [-v]
+usage: counterstring.py [-h] [-l LENGTH] [-m MARKER_CHAR] [-v]
 
-A tool for generating counterstrings.
+A tool for generating counterstring.
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -28,12 +28,12 @@ optional arguments:
   -v, --version         shows version information
   ```
 ## Examples
-`python counterstrings.py -l 56` will generate the following string and paste it to your clipboard:  
+`python counterstring.py -l 56` will generate the following string and paste it to your clipboard:  
 `2*4*6*8*11*14*17*20*23*26*29*32*35*38*41*44*47*50*53*56*`
 
 The last asterisk represents the end of a 56 character long string.
 
-Whereas `python counterstrings.py -l 18 -m \#` will generate:  
+Whereas `python counterstring.py -l 18 -m \#` will generate:  
 `2#4#6#8#11#14#17#2`
 
 ## How To Contribute
@@ -48,4 +48,4 @@ Or add your code:
 
 
 ## Known Issues
-Please check the [issue list](https://github.com/straurob/pycounterstrings/issues).
+Please check the [issue list](https://github.com/straurob/pycounterstring/issues).
