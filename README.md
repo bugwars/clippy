@@ -1,5 +1,5 @@
 ## Introduction
-A Python tool to generate "counterstrings" for testing e.g. text fields. It is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [Counterstrings: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
+A collection of Python scripts to generate test data for testing e.g. text fields. It is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [Counterstrings: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
 
 > Sometimes you need to test a text field or document with different kinds of stressful inputs. But, it can be a pain to prepare the text data. PerlClip is a tool that helps you do that.
 
@@ -35,6 +35,17 @@ The last asterisk represents the end of a 56 character long string.
 
 Whereas `python counterstrings.py -l 18 -m \#` will generate:  
 `2#4#6#8#11#14#17#2`
+
+## How To Contribute
+Open an issue (bug, feature request, whatever) for discussion.
+
+Or add your code:
+1. Fork this repository.
+2. Create a new feature branch: `git checkout -b my-feature`
+3. Commit your changes: `git commit -am "Add my feature"`
+4. Push back: `git push origin my-feature`
+5. Open a pull request.
+
 
 ## Known Issues
 Please check the [issue list](https://github.com/straurob/pycounterstrings/issues).
