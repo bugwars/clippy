@@ -15,7 +15,8 @@ def positive_ge_2(x):
 
 # Initializes argument parser.    
 parser = argparse.ArgumentParser(description="A tool for generating counterstrings.")
-parser.add_argument("-l", "--length", dest="length", type=positive_ge_2, help="maximum length to be generated; minimum value is: 2")
+parser.add_argument("-l", "--length", dest="length", type=positive_ge_2, help="maximum length to be generated. Minimum value is: 2")
+parser.add_argument("-m", "--marker", dest="marker_char", default="*", help="use a custom marker character. Default: *")
 parser.add_argument("-v", "--version", action="store_true", dest="version", help="shows version information")
 args = parser.parse_args()
 
@@ -24,13 +25,16 @@ if not (args.length or args.version):
   parser.print_help()
   exit()
 
+if len(args.marker_char) != 1:
+  exit("Marker must be a single character!")
+
 # Prints version.
 if args.version:
   print(version_info)
   exit(0)
 
 # Init
-marker_char = "*"
+marker_char = args.marker_char
 length = args.length
 counterstring = "2" + marker_char
 last_position = 2
