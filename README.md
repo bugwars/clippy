@@ -23,3 +23,6 @@ The last asterisk represents the end of a 56 character long string.
 
 Whereas `python counterstrings.py -l 18` will generate:  
 `2*4*6*8*11*14*17*2`
+
+## Known Issues
+Please check the [issue list](https://github.com/straurob/pycounterstrings/issues).
