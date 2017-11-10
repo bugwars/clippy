@@ -6,7 +6,11 @@ The idea is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the bl
 > Sometimes you need to test a text field or document with different kinds of stressful inputs. But, it can be a pain to prepare the text data. PerlClip is a tool that helps you do that.
 
 ## Setup
-This script requires the Python module [pyperclip](https://pypi.python.org/pypi/pyperclip). Recommended way for installation: `pip install pyperclip`
+This script requires the Python module `pyperclip` . Recommended way for installation: `pip install pyperclip`
+
+For further information about `pyperclip` visit:
+- [pyperclip on Github](https://github.com/asweigart/pyperclip)  
+- [pyperclip on PyPI](https://pypi.python.org/pypi/pyperclip)
 
 Tested with:
 - Windows 10 & Python 3.6
