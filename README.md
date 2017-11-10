@@ -1,5 +1,7 @@
 ## Introduction
-A collection of Python scripts to generate test data for testing e.g. text fields. It is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [counterstring: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
+A collection of Python scripts to generate test data for e.g. text fields. The generated string is copied to the clipboard for further usage.
+
+The idea is based on [PerlClip](http://www.satisfice.com/tools.shtml) and the blog post [counterstring: Self-Describing Test Data](http://www.satisfice.com/blog/archives/22) by James Bach.
 
 > Sometimes you need to test a text field or document with different kinds of stressful inputs. But, it can be a pain to prepare the text data. PerlClip is a tool that helps you do that.
 
